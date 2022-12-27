@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo-img">
+                <a href="#">
+                    <img src="./img/logo.png" alt="logo">
+                    <span>Mohid</span>
+                </a>
+            </div>
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="brand.html">
+                        Brands 
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="brand.html">Apple</a></li>
+                        <li><a href="brand.html">Xiaomi</a></li>
+                        <li><a href="brand.html">Sam Sung</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Recent Products</a></li>
+                <li><a href="admin.html">Contact</a></li>
+                <li><a href="login.html">About</a></li>
+                
+            </ul>
+        <!-- <div id="header" class="brand">
+            <div class="logo-img">
+                <a href="#">
+                    <img src="./img/logo.png" alt="logo">
+                    <span>Mohid</span>
+                </a>
+            </div>
+            <div class="container">
+                <div id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="brand.html">Brands</a></li>
+                        <li><a href="#">Recent Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="header_info">
+                <div class="header-input-search">
+                    <input id="search-product" type="text" placeholder="Search..." onchange="search()">
+                </div>
+                <img src="./img/logo-user.png" alt="search" class="icon icon-user" id="icon-user">
+                <a href="shopping.html" class="icon-cart">
+                    <span><img style="margin: 0;" src="./img/cart.png" alt="cart"></span>
+                    <span id="product-count">0</span>
+                </a>
+                <div id="user-logout" onclick="logoutUser()">Logout</div>
+                
+                <div id="user-signin" onclick="signinUser()">SignIn</div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div class="container">
+                <div class="wrapper-detail" id="wrapper-detail"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="copyright">Copyright @ 2022 | Mohid</div>
+        </div>
+    </div>
+</div>        
+
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/detail.js"></script>
+</body>
+</html>

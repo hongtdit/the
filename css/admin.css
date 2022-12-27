@@ -1,0 +1,186 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  line-height: 1.25em;
+  letter-spacing: 0.025em;
+  color: #333;
+  font-size: 16px;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  text-align: right;
+}
+.wrapper .container {
+  padding: 0;
+  margin: 0 auto;
+}
+.wrapper .container #header {
+  display: flex;
+  height: 60px;
+  padding: 0 30px;
+  align-items: center;
+  background-color: gray;
+  justify-content: space-between;
+}
+.wrapper .container #header a {
+  padding: 10px 30px;
+  color: white;
+}
+.wrapper .container #header a:hover {
+  color: #c4c4c4;
+}
+#main-content {
+  display: flex;
+}
+#main-content .sidebar {
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: #eee;
+}
+#main-content .content {
+  flex-grow: 1;
+}
+.active {
+  background-color: #ffe183 !important;
+}
+#add-product {
+  text-align: right;
+}
+#add-product .btn,
+button {
+  padding: 4px 16px;
+  height: 32px;
+  border-radius: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #128cf0;
+}
+#add-product .btn:hover {
+  color: #c4c4c4;
+}
+#list-sidebar {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.product-image {
+  width: auto;
+  height: 60px;
+}
+#list-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#list-sidebar ul li {
+  padding: 10px 0;
+  display: inline-block;
+  width: 100%;
+  background-color: #eee;
+}
+#list-sidebar ul li a {
+  padding: 10px 20px;
+  text-align: left;
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+#list-sidebar ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.tab-content {
+  margin: 0 30px;
+  padding: 0;
+  max-height: 1000px;
+  overflow: auto;
+}
+
+#modal-create-product {
+  display: none;
+}
+#input-product-desc {
+  margin: 0;
+}
+#input-product-support {
+  margin: 0;
+}
+
+.modal-content label {
+  min-width: 120px;
+  display: inline-block;
+}
+.modal-content input {
+  margin-bottom: 16px;
+  height: 32px;
+  width: 300px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 4px 12px;
+  border: 1px solid #1666e6;
+}
+input:focus{
+  outline: none;
+}
+.modal-content .btn-submit {
+  display: flex;
+  justify-content: end;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 430px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 32px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

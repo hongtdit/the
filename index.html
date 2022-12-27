@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo-img">
+                <a href="#">
+                    <img src="./img/logo.png" alt="logo">
+                    <span>Mohid</span>
+                </a>
+            </div>
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="brand.html">
+                        Brands 
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="brand.html">Apple</a></li>
+                        <li><a href="brand.html">Xiaomi</a></li>
+                        <li><a href="brand.html">Sam Sung</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Recent Products</a></li>
+                <li><a href="admin.html">Contact</a></li>
+                <li><a href="#">About</a></li>
+                
+            </ul>
+            <div class="header_info">
+                <!-- <div class="header-input-search">
+                    <input id="search-product" type="text" placeholder="Search..." onchange="search()">
+                </div> -->
+                <a href="login.html">
+                    <img src="./img/logo-user.png" alt="search" class="icon icon-user" id="icon-user">
+                </a>
+                <a href="shopping.html" class="icon-cart">
+                    <span><img style="margin: 0;" src="./img/cart.png" alt="cart"></span>
+                    <span id="product-count">0</span>
+                </a>
+                <div id="user-logout" onclick="logoutUser()">Logout</div>
+                <div id="user-signin" onclick="signinUser()">SignIn</div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="landing">
+                <div class="landing-content">
+                    <div class="name1">Discover Most Suitable Watches</div>
+                    <p>Find the best, reliable, and cheap smart watches here. We focus on product quality. Here you can find smart watches of almost all brands. So why you are waiting? Just order now!</p>
+                    <div class="input-search">
+                        <input onchange="search()" id="search-product" class="input-text" type="text" placeholder="Find the best brands">
+                        <span class="btn-submit" onclick="search()">Search</span>
+                    </div>
+                </div>
+                <img src="./img/landing.png" alt="landing" width="460px">
+            </div>
+        </div>
+        <div id="main-content">
+            <div class="container">
+                <div id="current-products">
+                    <div class="row-items">
+                        <div class="product-item">
+                            <a href="#"><img src="./img/product08.png" alt=""></a>
+                            <div class="product-item-content">
+                                <p class="brands">Apple</p>
+                                <p class="information">Apple is one of the most famous smart watches providing company.</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <a href="#"><img src="./img/product09.png" alt=""></a>
+                            <div class="product-item-content">
+                                <p class="brands">Xiaomi</p>
+                                <p class="information">Xiaomi smart watches are produced by MI company.</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <a href="#"><img src="./img/product10.png" alt=""></a>
+                            <div class="product-item-content">
+                                <p class="brands">Samsung</p>
+                                <p class="information">Samsung smart watches are best for there health and fitness features.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="find-watch">Find your favorite smart watch.</a>
+                <h3 class="latest-products">Our Latest Products</h3>
+                <div class="row-items products" id="render-products"></div>
+                <a href="#" class="find-watch">Here are our some of the best clients.</a>
+                <h3 class="latest-products">What People Say About Us</h3>
+                <div id="current-user">
+                    <div class="row-items">
+                        <div class="user-item">
+                            <a href="#"><img src="./img/user01.jfif" alt=""></a>
+                            <div class="product-item-content">
+                                <p class="brands">Apple</p>
+                                <p class="information">Apple is one of the most famous smart watches providing company.</p>
+                            </div>
+                        </div>
+                        <div class="user-item">
+                            <a href="#"><img src="./img/user02.jfif" alt=""></a>
+                            <div class="product-item-content">
+                                <p class="brands">Xiaomi</p>
+                                <p class="information">Xiaomi smart watches are produced by MI company.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing landing-footer">
+                    <div class="landing-content">
+                        <div class="name2">Subscribe To Newsletter</div>
+                        <p>Get free guide about smart watches daily. </p>
+                        <div class="input-search">
+                            <input class="input-text" type="text" placeholder="Enter Email Address">
+                            <span class="btn-submit">Subscribe</span>
+                        </div>
+                    </div>
+                    <img src="./img/product07.png" alt="landing" width="460px">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="copyright">Copyright @ 2022 | Mohid</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/search.js"></script>
+</body>
+</html>

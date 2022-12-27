@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>app</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div id="header">
+          <div class="user-name"><a href="index.html">Mohid</a></div>
+          <div class="btn-logout">
+            <a href="login.html" onclick="logout()">Logout</a>
+          </div>
+        </div>
+        <div id="main-content">
+          <div
+            class="sidebar"
+            id="list-sidebar"
+            style="padding: 0; text-align: center"
+          >
+            <ul>
+              <li class="sidebar-menu-item" onclick="selectTab(0)">
+                <a style="padding-left: 60px" href="#a1">Product</a>
+              </li>
+              <li class="sidebar-menu-item" onclick="selectTab(1)">
+                <a style="padding-left: 60px" href="#a2">Order</a>
+              </li>
+              <li class="sidebar-menu-item" onclick="selectTab(2)">
+                <a style="padding-left: 60px" href="#a3">User</a>
+              </li>
+            </ul>
+          </div>
+          <div class="content" id="answer-quenstion">
+            <div id="a1" class="tab-content" style="display: block">
+              <section>
+                <p id="add-product">
+                  <button
+                    type="button"
+                    id="btn-add-product"
+                    class="btn btn-default"
+                  >
+                    Add new product
+                  </button>
+                  <div id="modal-add-product" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <form id="form-product">
+                        <label for="name">Product Name: </label>
+                        <input
+                          class="form-input"
+                          type="text"
+                          id="product-name"
+                          name="name"
+                          required
+                        />
+                        <br>
+                        <label for="brand">Brand: </label>
+                        <input
+                          class="form-input"
+                          type="text"
+                          id="product-brand"
+                          name="brand"
+                          required
+                        />
+                        <br>
+                        <label for="price">Price: </label>
+                        <input
+                          class="form-input"
+                          type="number"
+                          id="product-price"
+                          name="price"
+                          required
+                        />
+                        <br>
+                        <label for="star">Star: </label>
+                        <input
+                          class="form-input"
+                          type="number"
+                          name="star"
+                          id="product-star"
+                          required
+                        />
+                        <br>
+                        <label for="description">Description: </label>
+                        <input
+                          class="form-input"
+                          type="text"
+                          id="product-description"
+                          name="description"
+                          required
+                        />
+                        <br>
+                        <div class="btn-submit">
+                          <button class="btn">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </p>
+
+                <div class="table-list-product">
+                  <table
+                    class=""
+                    id="myTable"
+                    width="100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Brands</th>
+                        <th>Product Name</th>
+                        <th>Price ($)</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-products"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+            <div id="a2" class="tab-content" style="display: block">
+              <section>
+                <p style="margin-top: 10px"></p>
+                <div class="table-list-product">
+                  <table
+                    class="display nowrap dtr-inline"
+                    id="myTables"
+                    width="100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Full name</th>
+                        <th>Code</th>
+                        <th>Date</th>
+                        <th>Total Price ($)</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-orders"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+            <div id="a3" class="tab-content" style="display: block">
+              <section>
+                <p style="margin-top: 10px"></p>
+                <div class="table-list-product">
+                  <table
+                    class="display nowrap dtr-inline"
+                    id="myTables"
+                    width="100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Avatar</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Date of birth</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-users"></tbody>
+                  </table>
+                </div>
+                <div id="modal-edit-user" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="form-user">
+                      <label for="username">Username: </label>
+                      <input
+                        class="form-input"
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                      />
+                      <br>
+                      <label for="firstName">First name: </label>
+                      <input
+                        class="form-input"
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                      />
+                      <br>
+                      <label for="lastName">Last name: </label>
+                      <input
+                        class="form-input"
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                      />
+                      <br>
+                      <label for="email">Email: </label>
+                      <input
+                        class="form-input"
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                      />
+                      <br>
+                      <label for="dob">Date of birth: </label>
+                      <input
+                        class="form-input"
+                        type="text"
+                        name="dob"
+                        id="dob"
+                        required
+                      />
+                      <br>
+                      <div class="btn-submit">
+                        <button class="btn">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/admin.js"></script>
+  </body>
+</html>
